@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nghiên cứu: Tác động của MXH đến thanh niên nông thôn</title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tải Font chữ Inter từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome cho các icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e40af', // Blue 800
+                        secondary: '#047857', // Emerald 700
+                        accent: '#f59e0b', // Amber 500
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-primary selection:text-white">
+
+    <header class="hero-gradient text-white min-h-[70vh] flex flex-col justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-900 mix-blend-multiply opacity-50"></div>
+        
+        <!-- Navigation đơn giản -->
+        <nav class="absolute top-0 w-full p-6 z-10 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tight">Social<span class="text-accent">Migration</span></div>
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#tong-quan" class="hover:text-accent transition-colors">Tổng quan</a>
+                <a href="#ly-thuyet" class="hover:text-accent transition-colors">Lý thuyết</a>
+                <a href="#khoang-trong" class="hover:text-accent transition-colors">Khoảng trống</a>
+                <a href="#doi-ngu" class="hover:text-accent transition-colors">Đội ngũ</a>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="container mx-auto px-6 relative z-10 text-center fade-in">
+            <span class="inline-block py-1 px-3 rounded-full bg-accent/20 text-accent font-semibold text-sm mb-4 border border-accent/30">
+                Tổng quan Nghiên cứu Khoa học
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 max-w-5xl mx-auto drop-shadow-lg">
+                Tác Động Của Mạng Xã Hội Đến Xu Hướng Di Cư & Việc Làm 
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-emerald-300 mt-2">
+                    Thanh Niên Nông Thôn Việt Nam
+                </span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10 font-light">
+                Nghiên cứu sự chuyển dịch từ di cư truyền thống sang "di cư số", sự xuất hiện của "ảo tưởng đô thị", và xu hướng ly nông bất ly hương trong kỷ nguyên Web 2.0/3.0.
+            </p>
+            <a href="#tong-quan" class="inline-flex items-center gap-2 bg-accent hover:bg-yellow-400 text-slate-900 font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-lg shadow-accent/30">
+                Khám phá ngay <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="doi-ngu" class="py-20 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Thành Viên Nhóm Số 27</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-500 max-w-2xl mx-auto">Tập thể nghiên cứu sinh tham gia hệ thống hóa và phân tích dự án.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-stretch gap-6">
+                <!-- Member 1 -->
+                <div class="glass-card flex-[1_1_220px] max-w-[260px] rounded-2xl p-6 text-center fade-in hover:-translate-y-2 transition-transform duration-300 w-full">
+                    <img src="https://placehold.co/150x150/1e40af/ffffff?text=ST" 
+                         alt="Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-md">
+                    <h3 class="font-bold text-lg text-slate-800">Nguyễn Song Thư</h3>
+                    <p class="text-xs text-primary font-semibold mb-2">26031330</p>
+                    <p class="text-xs text-slate-500 mb-1"><i class="fa-regular fa-calendar mr-1"></i> 26/04/2008</p>
+                    <span class="inline-block bg-slate-100 text-slate-600 text-[10px] px-2 py-1 rounded-md mt-2">QH-2026-X-QHCC.C</span>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="glass-card flex-[1_1_220px] max-w-[260px] rounded-2xl p-6 text-center fade-in hover:-translate-y-2 transition-transform duration-300 delay-75 w-full">
+                    <img src="https://placehold.co/150x150/047857/ffffff?text=AT" 
+                         alt="Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-md">
+                    <h3 class="font-bold text-lg text-slate-800">Trần Anh Thư</h3>
+                    <p class="text-xs text-secondary font-semibold mb-2">26031332</p>
+                    <p class="text-xs text-slate-500 mb-1"><i class="fa-regular fa-calendar mr-1"></i> 05/03/2008</p>
+                    <span class="inline-block bg-slate-100 text-slate-600 text-[10px] px-2 py-1 rounded-md mt-2">QH-2026-X-QHCC.A</span>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="glass-card flex-[1_1_220px] max-w-[260px] rounded-2xl p-6 text-center fade-in hover:-translate-y-2 transition-transform duration-300 delay-150 w-full">
+                    <img src="https://placehold.co/150x150/f59e0b/ffffff?text=HT" 
+                         alt="Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-md">
+                    <h3 class="font-bold text-lg text-slate-800">Nguyễn Hoàng Thương</h3>
+                    <p class="text-xs text-accent font-semibold mb-2">26031333</p>
+                    <p class="text-xs text-slate-500 mb-1"><i class="fa-regular fa-calendar mr-1"></i> 15/07/2008</p>
+                    <span class="inline-block bg-slate-100 text-slate-600 text-[10px] px-2 py-1 rounded-md mt-2">QH-2026-X-QHCC.A</span>
+                </div>
+
+                <!-- Member 4 (Trang chuyển lên) -->
+                <div class="glass-card flex-[1_1_220px] max-w-[260px] rounded-2xl p-6 text-center fade-in hover:-translate-y-2 transition-transform duration-300 delay-200 w-full">
+                    <img src="https://placehold.co/150x150/ec4899/ffffff?text=TT" 
+                         alt="Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-md">
+                    <h3 class="font-bold text-lg text-slate-800">Nguyễn Lê Thu Trang</h3>
+                    <p class="text-xs text-pink-600 font-semibold mb-2">26031344</p>
+                    <p class="text-xs text-slate-500 mb-1"><i class="fa-regular fa-calendar mr-1"></i> 05/10/2008</p>
+                    <span class="inline-block bg-slate-100 text-slate-600 text-[10px] px-2 py-1 rounded-md mt-2">QH-2026-X-QHCC.C27</span>
+                </div>
+
+                <!-- Member 5 (Toàn chuyển xuống dưới cùng) -->
+                <div class="glass-card flex-[1_1_220px] max-w-[260px] rounded-2xl p-6 text-center fade-in hover:-translate-y-2 transition-transform duration-300 delay-300 border-2 border-primary/20 relative w-full">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full whitespace-nowrap shadow-md">
+                        <i class="fa-solid fa-code mr-1"></i> Web Developer
+                    </div>
+                    <img src="https://placehold.co/150x150/334155/ffffff?text=VT" 
+                         alt="Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-md mt-2">
+                    <h3 class="font-bold text-lg text-slate-800">Nguyễn Văn Toàn</h3>
+                    <p class="text-xs text-primary font-semibold mb-2">26031337</p>
+                    <p class="text-xs text-slate-500 mb-1"><i class="fa-regular fa-calendar mr-1"></i> 01/01/2008</p>
+                    <span class="inline-block bg-slate-100 text-slate-600 text-[10px] px-2 py-1 rounded-md mt-2">QH-2026-X-QHCC.C</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tong-quan" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2 fade-in">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         onerror="this.src='https://placehold.co/800x600/1e40af/ffffff?text=Thanh+nien+va+Mang+xa+hoi'"
+                         alt="Thanh niên sử dụng điện thoại" 
+                         class="rounded-3xl shadow-2xl object-cover h-[400px] w-full relative z-0">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Thanh niên kết nối số" 
+                         class="rounded-3xl shadow-xl object-cover h-[250px] w-3/4 -mt-24 ml-auto relative z-10 border-4 border-white">
+                </div>
+                <div class="w-full md:w-1/2 fade-in">
+                    <div class="text-secondary font-bold tracking-wider uppercase text-sm mb-2">Bối cảnh & Mở đầu</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">Sự Dịch Chuyển Phương Thức Di Cư</h2>
+                    
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Trong hai thập kỷ đầu thế kỷ 21, sự bùng nổ của Internet cùng các nền tảng truyền thông mạng xã hội (MXH) như <strong class="text-primary">Facebook, TikTok, YouTube</strong> đã định hình lại cấu trúc kinh tế - xã hội toàn cầu. Tại Việt Nam, quá trình đô thị hóa diễn ra song song với tỷ lệ phủ sóng mạng Internet gia tăng mạnh mẽ, biến MXH trở thành phần không thể thiếu của giới trẻ nông thôn.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-arrow-right text-accent mt-1"></i>
+                            <span class="text-slate-700"><strong>Truyền thống:</strong> Di cư chủ yếu bị chi phối bởi yếu tố kinh tế (chênh lệch thu nhập, thiếu việc làm) và thông qua mạng lưới họ hàng hẹp.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-arrow-right text-accent mt-1"></i>
+                            <span class="text-slate-700"><strong>Hiện nay:</strong> Nhờ tính tương tác, trực quan, MXH phô diễn cơ hội việc làm, lối sống thành thị, làm xuất hiện nghề mới (bán hàng trực tuyến, affiliate marketing, sáng tạo nội dung số).</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-lg">
+                        <p class="text-sm text-slate-700 italic">
+                            "Việc hệ thống hóa các công trình nghiên cứu là cần thiết nhằm nhận diện khoảng trống tri thức và cung cấp cơ sở cho chính sách phát triển lao động - việc làm trong thời đại số."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ly-thuyet" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <div class="text-secondary font-bold tracking-wider uppercase text-sm mb-2">Cơ sở khoa học</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Các Khung Lý Thuyết Nền Tảng</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600 max-w-3xl mx-auto mt-4">Truyền thông MXH đóng vai trò là môi trường xã hội hóa thứ hai, định hình nhận thức và hành vi cá nhân trong bối cảnh di cư lao động nông thôn.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Theory 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-shadow fade-in relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="w-14 h-14 bg-primary text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-magnet"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Lý thuyết Đẩy - Kéo</h3>
+                    <p class="text-xs text-slate-500 mb-4 font-medium uppercase">Everett S.Lee, 1966</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        <strong>Yếu tố đẩy:</strong> Thiếu việc làm, thu nhập thấp tại nông thôn.<br/>
+                        <strong>Yếu tố kéo:</strong> Cơ hội việc làm, mức sống đô thị.<br/>
+                        MXH khuếch đại <strong>"yếu tố kéo"</strong> bằng hình ảnh thành thị hấp dẫn, và hạ thấp rào cản di chuyển nhờ thông tin nhà ở, việc làm nhanh chóng.
+                    </p>
+                </div>
+
+                <!-- Theory 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-shadow fade-in delay-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-100 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="w-14 h-14 bg-secondary text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Lý thuyết Học tập Xã hội</h3>
+                    <p class="text-xs text-slate-500 mb-4 font-medium uppercase">Albert Bandura, 1977</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Con người hình thành hành vi mới thông qua quan sát. Thanh niên nông thôn tiếp xúc với KOLs, Tiktoker, lao động đi trước trên MXH, từ đó <strong>mô phỏng hình mẫu</strong>, thúc đẩy kỳ vọng nghề nghiệp và kích thích hành vi di cư.
+                    </p>
+                </div>
+
+                <!-- Theory 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-shadow fade-in delay-200 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-amber-100 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="w-14 h-14 bg-accent text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Lý thuyết Vốn xã hội</h3>
+                    <p class="text-xs text-slate-500 mb-4 font-medium uppercase">Social Capital Theory</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        MXH giúp chuyển hóa <strong>"vốn xã hội thực" thành "vốn xã hội ảo"</strong>, cho phép thanh niên tận dụng hội nhóm trực tuyến để mở rộng mạng lưới hỗ trợ tại nơi nhập cư, chia sẻ rủi ro.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Đồ họa nền -->
+        <div class="absolute opacity-10 top-0 left-0 w-full h-full" 
+             style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-12 fade-in">
+                <div class="text-accent font-bold tracking-wider uppercase text-sm mb-2">Toàn cảnh</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Tổng Quan Tình Hình Nghiên Cứu</h2>
+                <div class="w-24 h-1 bg-accent mx-auto rounded-full mb-8"></div>
+            </div>
+
+            <!-- Bảng so sánh responsive -->
+            <div class="bg-slate-800 rounded-2xl p-1 md:p-6 shadow-2xl border border-slate-700 fade-in overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[600px]">
+                    <thead>
+                        <tr class="border-b border-slate-600">
+                            <th class="p-4 text-slate-400 font-medium uppercase text-sm w-1/4">Tiêu chí</th>
+                            <th class="p-4 text-blue-300 font-bold text-lg w-3/8"><i class="fa-solid fa-earth-americas mr-2"></i> Nghiên cứu Quốc tế</th>
+                            <th class="p-4 text-emerald-300 font-bold text-lg w-3/8"><i class="fa-solid fa-star text-yellow-500 mr-2"></i> Nghiên cứu tại Việt Nam</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-700">
+                        <tr class="hover:bg-slate-700/50 transition-colors">
+                            <td class="p-4 font-semibold text-slate-300">Góc độ lý thuyết</td>
+                            <td class="p-4 text-slate-400 text-sm">Sử dụng lý thuyết hiện đại (Platform Capitalism, Media Ecology, Gig Economy).</td>
+                            <td class="p-4 text-slate-400 text-sm">Chủ yếu dựa trên Lý thuyết Đẩy - Kéo truyền thống và Xã hội học lao động.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/50 transition-colors">
+                            <td class="p-4 font-semibold text-slate-300">Phương pháp</td>
+                            <td class="p-4 text-slate-400 text-sm">Định lượng nâng cao, Phân tích dữ liệu lớn (Big Data), Social Listening.</td>
+                            <td class="p-4 text-slate-400 text-sm">Khảo sát bảng hỏi mô tả, phỏng vấn sâu quy mô mẫu vừa và nhỏ.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/50 transition-colors">
+                            <td class="p-4 font-semibold text-slate-300">Trọng tâm nội dung</td>
+                            <td class="p-4">
+                                <ul class="list-disc pl-4 text-slate-400 text-sm space-y-1">
+                                    <li>Mạng lưới "liên kết yếu".</li>
+                                    <li>Chú trọng tác động của thuật toán (Ảo tưởng đô thị).</li>
+                                    <li>Công việc tự do trực tuyến (Kinh tế nền tảng).</li>
+                                </ul>
+                            </td>
+                            <td class="p-4">
+                                <ul class="list-disc pl-4 text-slate-400 text-sm space-y-1">
+                                    <li>Thực trạng tìm việc & lừa đảo trực tuyến.</li>
+                                    <li>Thay thế trung tâm việc làm bằng MXH (TikTok/FB).</li>
+                                    <li class="text-emerald-400 font-medium">Xu hướng "ly nông bất ly hương" (livestream nông sản).</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="khoang-trong" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12 mb-20">
+                <!-- Cột trái: Khoảng trống -->
+                <div class="w-full lg:w-1/2 fade-in">
+                    <div class="text-secondary font-bold tracking-wider uppercase text-sm mb-2">Phân tích</div>
+                    <h2 class="text-3xl font-bold text-slate-800 mb-8">Các Khoảng Trống (Research Gaps)</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-800">Khoảng trống Lý luận</h4>
+                                <p class="text-sm text-slate-600 mt-1">Thiếu khung lý thuyết tích hợp giữa Xã hội học Truyền thông và Xã hội học Di cư. MXH thường chỉ được nhìn nhận như công cụ truyền tải thông tin thuần túy chứ chưa được xem là môi trường sinh thái có khả năng tái cấu trúc nhận thức và giá trị sống.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-code-branch"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-800">Khoảng trống Nội dung</h4>
+                                <p class="text-sm text-slate-600 mt-1">Chưa có nghiên cứu sâu đánh giá tác động của các thuật toán gợi ý (Recommendation Algorithms) đến tâm lý lệch chuẩn trong định hướng nghề nghiệp, cũng như thiếu số liệu so sánh định lượng xu hướng "ly nông bất ly hương".</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-800">Khoảng trống Phương pháp luận</h4>
+                                <p class="text-sm text-slate-600 mt-1">Còn phụ thuộc nhiều vào dữ liệu tự kê khai qua bảng hỏi truyền thống, thiếu sự kết hợp với Khoa học Dữ liệu (Data Science) để phân tích hành vi người dùng trên không gian mạng theo thời gian thực.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột phải: Đề xuất & Hình ảnh -->
+                <div class="w-full lg:w-1/2 fade-in delay-100">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         onerror="this.src='https://placehold.co/800x400/047857/ffffff?text=Data+Science+Research'"
+                         alt="Phân tích dữ liệu" 
+                         class="rounded-2xl shadow-lg w-full h-48 object-cover mb-8">
+                         
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2"><i class="fa-solid fa-lightbulb text-accent mr-2"></i> Gợi ý Chính sách Ứng dụng</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-secondary mt-1"></i> 
+                                <span><strong>Nâng cao Năng lực số (Digital Literacy):</strong> Trang bị kỹ năng lọc thông tin, nhận diện lừa đảo trực tuyến và tư duy phản biện.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-secondary mt-1"></i> 
+                                <span><strong>Phát triển kênh chính thống:</strong> Xây dựng các kênh tuyển dụng minh bạch, thu hút của cơ quan quản lý lao động trên các nền tảng MXH.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-secondary mt-1"></i> 
+                                <span><strong>Hỗ trợ sinh kế số tại chỗ:</strong> Đầu tư hạ tầng, đào tạo kỹ năng kinh doanh số giúp thanh niên phát triển kinh tế tại quê hương.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100 fade-in">
+                <div class="flex flex-col-reverse md:flex-row gap-10 items-center">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6">Thảo Luận: Bản Chất Hai Mặt Của Mạng Xã Hội</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-secondary flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-circle-plus"></i> Tác động tích cực
+                            </h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Dân chủ hóa thông tin thị trường lao động, mở ra các phương thức sinh kế mới tại chỗ như thương mại điện tử nông thôn, và tạo lập mạng lưới an sinh ảo hỗ trợ lao động di cư nhanh chóng, hiệu quả.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold text-red-500 flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-triangle-exclamation"></i> Rủi ro & Thách thức
+                            </h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Gia tăng nguy cơ từ thông tin giả mạo, lừa đảo tuyển dụng. Tạo áp lực so sánh xã hội (peer pressure), và đặc biệt dễ dẫn đến tâm lý di cư bồng bột do những <strong>"ảo tưởng đô thị"</strong> được xây dựng qua lăng kính màu hồng của mạng xã hội.</p>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-slate-100">
+                            <h4 class="font-semibold text-slate-800 mb-3">Định hướng nghiên cứu tương lai:</h4>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
+                                <li>Đẩy mạnh nghiên cứu liên ngành kết hợp Xã hội học, Truyền thông và Khoa học dữ liệu.</li>
+                                <li>Triển khai nghiên cứu dọc (Longitudinal Study) theo dõi thay đổi nhận thức theo thời gian.</li>
+                                <li>Đánh giá tính bền vững của các hình thái việc làm mới trên nền tảng số.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hợp tác sinh viên" class="rounded-2xl shadow-md h-48 w-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Làm việc trực tuyến" class="rounded-2xl shadow-md h-48 w-full object-cover mt-8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center md:text-left grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">Kết Luận</h4>
+                <p class="text-sm leading-relaxed max-w-md mx-auto md:mx-0">
+                    Truyền thông mạng xã hội đã vượt qua vai trò của một phương tiện giải trí để trở thành tác nhân quan trọng chi phối hành vi di cư và lựa chọn việc làm của thanh niên nông thôn Việt Nam. Việc lấp đầy khoảng trống nghiên cứu sẽ cung cấp cơ sở cho hoạch định chính sách lao động, quản lý di cư và phát triển nông thôn bền vững trong kỷ nguyên số.
+                </p>
+                <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
+                    <span class="text-xs bg-slate-800 px-3 py-1 rounded-full text-slate-300">#DiCưLaoĐộng</span>
+                    <span class="text-xs bg-slate-800 px-3 py-1 rounded-full text-slate-300">#ThanhNiênNôngThôn</span>
+                    <span class="text-xs bg-slate-800 px-3 py-1 rounded-full text-slate-300">#TruyềnThôngSố</span>
+                    <span class="text-xs bg-slate-800 px-3 py-1 rounded-full text-slate-300">#KinhTếNềnTảng</span>
+                </div>
+            </div>
+            
+            <div class="text-sm">
+                <h4 class="text-white text-lg font-bold mb-4">Nguồn Tài Liệu (Tham khảo)</h4>
+                <div class="h-64 overflow-y-auto pr-2 custom-scrollbar">
+                    <ul class="space-y-3 opacity-80 text-xs">
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Bandura, A. (1977). Social Learning Theory. Englewood Cliffs, NJ: Prentice-Hall.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Dekker, R., & Engbersen, G. (2014). How social media transform migrant networks and facilitate migration. Global Networks, 14(4), 401-418.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Đặng Nguyên Anh (2008). Di cư nội địa ở Việt Nam: Thực trạng, nguyên nhân và các vấn đề đặt ra. NXB Khoa học Xã hội.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Graham, M., Hjorth, I., & Khurana, S. (2017). Digital labour and development: Impacts of global digital labour platforms. Transfer, 23(2), 135-162.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Lee, E. S. (1966). A theory of migration. Demography, 3(1), 47-57.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Nath, S. (2020). Social media and the illusion of urban prosperity. Journal of Rural and Community Development, 15(2), 88-105.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Nguyễn Thị Minh Phương (2022). Tác động của mạng xã hội TikTok đến định hướng nghề nghiệp của giới trẻ. Tạp chí Nghiên cứu Thanh niên, 4, 25-34.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Thulin, E., & Vilhelmson, B. (2019). Virtualized migration networks. Geoforum, 101, 112-120.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Tổng cục Thống kê (2020). Báo cáo điều tra di cư nội địa Việt Nam năm 2019. NXB Thống kê.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-quote-left mr-2 mt-1 text-slate-600 shrink-0"></i> <span>Trần Hữu Quang (2020). Xã hội học truyền thông đại chúng. NXB Đại học Quốc gia TP.HCM.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-12 text-center text-xs opacity-50 border-t border-slate-800 pt-6">
+            &copy; 2026 Nhóm Nghiên Cứu. Website được phát triển bởi Nguyễn Văn Toàn.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Khởi tạo Intersection Observer để tạo hiệu ứng mượt mà khi cuộn trang
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        // Tùy chọn: Dừng theo dõi sau khi đã xuất hiện để cải thiện hiệu suất
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Gắn observer vào tất cả các phần tử có class 'fade-in'
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
